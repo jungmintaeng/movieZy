@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="euc-kr">
+  <script type="text/javascript" src="javascripts/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+  <script type="text/javascript" src="javascripts/jquery.xdomainajax.js"></script>
+  <script type="text/javascript" src="javascripts/xml2json.js"></script>
+  <title>Moviezy-영화 정보를 한눈에!</title>
+  <style>
+  @import url(CSS/style.css);
+  @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a id="banner" href="javascript:window.location.reload(true);">
+      <div>
+        <p class="banner_title">MovieZy</p>
+        <p class="banner_desc">영화 정보를 한 눈에!</p>
+      </div>
+    </a>
+    <div id="menubar">
+      <p class="menu_item">추천 영화</p>
+      <p class="menu_item">국가별 영화</p>
+      <p class="menu_item">배우, 감독</p>
+      <p class="menu_item">영화 통합 검색</p>
+    </div>
+
+    <p class="title">박스오피스<br>정보</p>
+    <div class="clear_float"></div>
+
+    <!--메인 화면-->
+    <div class="boxOfficeContainer hidden contents">
+      <img id="poster_main" width="438" height="627">
+      <div id="rank"></div>
+      <div class="today_boxoffice">
+        <span class="movieNm"><div id="movieNm"></div></span><br>
+        <div class="movieDescTitle">개봉일</div><span class="movieDesc"><div id="openDt"></div></span>
+        <div class="movieDescTitle">매출액</div><span class="movieDesc"><div id= "salesAcc"></div></span>
+        <div class="movieDescTitle">총 관객 수</div><span class="movieDesc"><div id="audiAcc"></div></span>
+        <span class="movieDesc"><div id="audiCnt"></div></span>
+        <div class="movieDescTitle">오늘 상영 수</div><span class="movieDesc"><div id="showCnt"></div></span>
+      </div>
+      <p>상세 정보 보기 &gt;</p>
+      <table class="boxOfficeTable">
+        <thead>
+          <tr><th>랭킹</th><th>제목</th></tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--추천 영화 부분-->
+    <div class="recommend hidden contents">
+      <p class="recommend_menuDesc">오늘은 이 날의 영화 어때요?</p>
+      <p><span>2004년부터 현재까지 날짜별 박스오피스 TOP 10을 보실 수 있습니다.</span>
+      <a href="javascript:history.go(0);">오늘의 박스오피스 보러 가기 ▶</a></p>
+      <br><br><form class="recommendForm">
+        <fieldset>
+          <legend>검색 옵션</legend>
+          <label>날짜 선택 <input id="recommend_date" type="date"></label>
+          <input id="recommend_submit" type="button" name="anotherBoxOffice" value="이 날의 박스오피스 TOP 10 검색">
+        </fieldset>
+      </form>
+      <ul class="recommendList"><!--li item 동적 추가--></ul>
+    </div>
+    <!--영화 통합 검색 부분-->
+    <div class="search hidden contents">
+      <form class="searchForm">
+        <fieldset>
+          <legend>통합 검색</legend>
+          <label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;영화명 <input type="text" id="search_text" size="80">
+          </label>
+          <input type="button" id="search_button" value="검색">
+        </fieldset>
+      </form>
+      <p id="search_resultCount"></p>
+      <hr>
+      <p id="search_noresult" class="hidden" style="border:none; text-align:center;font-size:24px;margin : 50px;">표시할 결과가 없습니다.</p>
+      <ul id="searchList"></ul>
+      <ul id="search_page"></ul>
+    </div>
+    <!--국가별 영화 부분-->
+    <div class="nation hidden contents">
+      <form class="nationForm">
+        <fieldset>
+          <legend>검색 옵션</legend>
+          <label>국가명 : <select class="nationSelect"></select></label>
+          <label>개봉년도 : <select class="nationOpenDt"></select></label>
+          <input id="nation_submit" type="button" name="movieNation" value="검색">
+        </fieldset>
+      </form>
+      <p id="nation_resultCount"></p>
+      <hr>
+      <ul class="nationList"></ul>
+      <p id="nation_noresult" class="hidden" style="border:none; text-align:center;font-size:24px;margin : 50px;">표시할 결과가 없습니다.</p>
+      <ul id="nation_page"></ul>
+    </div>
+    <!--배우, 감독 부분-->
+    <div class="people hidden contents">
+      <p>영화 배우, 감독 등 영화인을 <strong>이름</strong> 또는 <strong>참여 영화명</strong>으로 검색할 수 있습니다.</p>
+      <form class="peopleForm">
+        <fieldset>
+          <legend>검색 옵션</legend>
+          옵션 :
+          <select id="peopleSelect">
+            <option value="name">이름으로 검색</option>
+            <option value="movie">영화명으로 검색</option>
+          </select>
+          <label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;검색어 <input type="text" id="people_search_text" size="80">
+          </label>
+          <input type="button" id="people_search_button" value="검색">
+        </fieldset>
+      </form>
+      <hr>
+      <p id="people_resultCount"></p>
+      <p id="people_noresult" class="hidden" style="border:none; text-align:center;font-size:24px;margin : 50px;">표시할 결과가 없습니다.</p>
+      <ul id="peopleList">
+      </ul>
+      <ul id="people_page"></ul>
+    </div>
+    <div id="movie_specification" class="hidden contents">
+      <div class="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        영화 상세 정보<img src="res/shut.png"></div>
+      <h3 id="spec_title"></h3><p id="grade"></p>
+      <img width="300" height="412.5">
+      <p id="spec_subinfo"></p>
+      <span>관객수</span>
+      <p id="spec_audi"></p>
+      <span>감독</span>
+      <p id="spec_directors"><br></p>
+      <span>출연</span>
+      <p id="spec_actors"><br></p>
+      <span>줄거리</span>
+      <p id="spec_story"></p>
+      <iframe src="" width="880" height="400"></iframe>
+    </div>
+    <br><hr>
+    <p class="tag">Kwang woon Univ. Computer Software <strong>Human Computer Interface</strong><br>
+    2012726006 신정민 jungmin4025@gmail.com</p>
+  </div><!--Container-->
+</body>
+</html>
