@@ -1,0 +1,463 @@
+body{
+  font-family: 'Jeju Gothic', serif;
+}
+.hidden{
+  display: none;
+}
+.container{
+  margin : 30px auto 0px auto;
+  padding : 0px;
+  width: 1000px;
+  position: relative;
+}
+#banner{
+  float: left;
+  margin : 0px 0px 50px 0px;
+  padding : 0px;
+  border-radius : 5px;
+  background: white;
+  display : inline-block;
+  height : 60px;
+  width : 150px;
+  text-decoration: none;
+  color : black;
+}
+.banner_title{
+  margin : 3px 0px 0px 0px;
+  text-align : center;
+  color : #32CDA0;
+  text-shadow: 2px 2px;
+  font-size : 30px;
+}
+.banner_desc{
+  padding-top : 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  margin : 0px 0px 0px 0px;
+  text-align : center;
+  font-size : 12px;
+}
+#menubar{
+  float: left;
+  border-radius : 5px;
+  background : #32CDA0;
+  width : 850px;
+  height : 60px;
+  margin : 0px 0px 50px 0px;
+  padding-top : 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  display : inline-block;
+  text-align: center;
+}
+.menu_item{
+  color : DarkSlateGray;
+  line-height : 60px;
+  margin : 0px 40px 0px 40px;
+  font-size : 20px;
+  cursor : pointer;
+  display : inline-block;
+  padding : 0px;
+}
+.menu_item_hover{
+  /*border-bottom : 4px solid gray;*/
+  font-size: 25px;
+}
+/*상단 부분 종료*/
+/*하단부 태그*/
+.tag{
+  text-align: center;
+}
+.title{
+  font-size: 24px;
+  display: block;
+  padding-top : 5px;
+  padding-bottom : 5px;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+  width: 1000px;
+  height : 26px;
+  color: black;
+  float: left;
+  text-align : center;
+  border-radius: 10px;
+}
+.clear_float{
+  width: 1000px;
+  height : 195px;
+}
+
+.boxOfficeContainer{
+  position : relative;
+  border : 3px double gray;
+  margin : 0px 0px 0px 0px;
+  padding : 10px;
+  width : 1000px;
+  height : 630px;
+  background : MintCream;
+  border-radius: 20px;
+}
+
+#poster_main{
+  position : absolute;
+  left : 10px;
+  top : 10px;
+  border-radius: 10px;
+}
+.today_boxoffice{
+  line-height: 45px;
+  position : relative;
+  left : 460px;
+  top : 85px;
+  font-size :25px;
+}
+#rank{
+  padding-left : 10px;
+  padding-right : 10px;
+  position: absolute;
+  top : 10px;
+  right : 10px;
+  border-left: 2px solid gray;
+  border-right : 2px solid gray;
+}
+#movieNm{
+  width: 500px;
+  padding-left : 10px;
+  padding-right : 10px;
+  border-left: 4px groove gray;
+  border-right: 4px groove gray;
+  text-align: center;
+}
+#openDt, #salesAcc, #audiAcc, #audiCnt, #showCnt{
+  padding-left: 30px;
+}
+.today_boxoffice span{
+  color : #32CDA0;
+  font-size : 35px;
+}
+.today_boxoffice span.movieDesc{
+  color : LightCoral;
+  font-size : 20px;
+}
+.today_boxoffice div.movieDescTitle{
+  border-left: 2px dotted gray;
+  padding-left: 10px;
+}
+
+.boxOfficeTable{
+  text-align: left;
+  position : absolute;
+  right : 10px;
+  bottom : 10px;
+  border-radius: 5px;
+  color : DarkSlateGray;
+}
+.boxOfficeTable tr td, .boxOfficeTable tr th{
+  padding : 5px;
+  border-radius: 7px;
+}
+.boxOfficeTable thead{
+  text-align: center;
+  background : #32CDA0;
+  border-radius: 3px;
+  font-weight: normal;
+}
+.boxOfficeTable thead th{
+  border : 1px solid gray;
+  background : #32CDA0;
+  font-weight: normal;
+}
+.boxOfficeTable tbody{
+  font-size : 13px;
+  background : AntiqueWhite;
+}
+.boxOfficeTable tbody tr:hover{
+  cursor : pointer;
+  background : pink;
+}
+
+.recommend{
+  position: relative;
+}
+.recommend > p > span{
+  position : absolute;
+  top : 20px;
+  right : 225px;
+  font-size : 0.8em;
+}
+.recommend > p > a{
+  position : absolute;
+  top : 17px;
+  right : 10px;
+  text-decoration: none;
+  color : #32CDA0;
+}
+
+input[type=button]{
+  padding : 3px;
+  text-align: center;
+  font-family: 'Jeju Gothic', serif;
+  font-size : 15px;
+  background: Ivory;
+  border-radius: 6px;
+}
+
+input[type=date]{
+  text-align: center;
+  font-family: 'Jeju Gothic', serif;
+  font-size : 16px;
+  width: 140px;
+}
+input[type=date]::-webkit-clear-button,
+input[type=date]::-webkit-inner-spin-button{
+    display: none;
+}
+
+input[type=text]{
+  padding : 3px;
+  font-family: 'Jeju Gothic', serif;
+}
+
+input[type=text]:focus{
+  border : 3px solid #32CDA0;
+}
+
+.recommendList, .nationList, #searchList{
+  text-align: center;
+}
+
+.recommendList li, .nationList li, #searchList li{
+  position: relative;
+  border-bottom: 4px groove gray;
+  border-top: 4px groove gray;
+  display : inline-block;
+  width : 150px;
+  margin : 10px;
+  height : 360px;
+  background-color: whitesmoke;
+  overflow : hidden;
+}
+.recommendList li img, .nationList li img, #searchList li img{
+  width : 150px;
+  height : 200px;
+  cursor: pointer;
+}
+.recommendList li p, .nationList li p, #searchList li p{
+  text-align: center;
+  line-height: 25px;
+  font-weight: lighter;
+  width: 150px;
+  height : 350px;
+}
+.recommendList li p span, .nationList li p span, #searchList li p span{
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.recommendList li a, .nationList li a, #searchList li a{
+  cursor: pointer;
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  text-decoration: none;
+  color : DimGray;
+}
+
+.nationSelect, .nationOpenDt{
+  font-family: 'Jeju Gothic', serif;
+}
+
+#nation_resultCount{
+  text-align: center;
+}
+
+#nation_page, #people_page, #search_page{
+  text-align: center;
+  list-style-type: none;
+}
+
+#nation_page li, #people_page li, #search_page li{
+  padding : 5px;
+  display: inline;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  margin: 3px;
+}
+
+#peopleSelect{
+  font-family: 'Jeju Gothic', serif;
+  font-size : 16px;
+}
+
+fieldset{
+  text-align: center;
+}
+
+#peopleList{
+  list-style-type: none;
+}
+
+#peopleList>li{
+  margin : 10px;
+  border-top : 4px groove gray;
+  border-bottom : 4px groove gray;
+  width : 800px;
+  position : relative;
+  padding : 10px;
+  border-radius: 5px;
+}
+#role{
+  color : GoldenRod;
+  position : absolute;
+  right : 10px;
+  top : 0px;
+}
+#peopleName{
+  text-align: left;
+  font-size : 20px;
+}
+#peopleList>li>ul{
+  margin-top: 10px;
+  list-style-type: none;
+}
+#peopleList>li>ul>li{
+  margin-bottom: 3px;
+  margin-top : 3px;
+}
+#peopleList span{
+  color : SlateGrey;
+  font-weight: 400;
+}
+#people_resultCount{
+  text-align: center;
+}
+
+#movie_specification{
+  cursor: url('../res/close.png'), auto;
+  background: black;
+  color : white;
+  z-index: 998;
+  position: absolute;
+  width : 900px;
+  top : 350px;
+  left : 50px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 0;
+}
+
+#movie_specification h3{
+  width: auto;
+  border : 1px solid white;
+  border-radius : 3px;
+  font-size : 35px;
+  margin : 30px 30px 0px 30px;
+  padding-top : 10px;
+  padding-bottom : 10px;
+}
+
+#movie_specification span{
+  font-weight: bold;
+  font-size : 24px;
+}
+
+#spec_title, #spec_subinfo{
+  color : GoldenRod;
+}
+
+#spec_story{
+  text-align: left;
+  border : 1px solid whitesmoke;
+  border-radius: 5px;
+  margin : 10px 30px 30px 30px;
+  line-height: 24px;
+  padding : 15px;
+}
+
+.top{
+  line-height: 35px;
+  font-family: 'Jeju Gothic', serif;
+  text-align: center;
+  color : black;
+  font-size : 20px;
+  height : 35px;
+  width: 880px;
+  margin : 10px;
+  background: whitesmoke;
+  position : relative;
+}
+.top img{
+  width: 35px;
+  height : 35px;
+  float: right;
+}
+
+.top img:hover{
+  cursor : pointer;
+}
+
+#grade{
+  font-size: 20px;
+  text-align: center;
+}
+
+#grade > span{
+  color : red;
+}
+
+.boxOfficeContainer p{
+  font-size: 23px;
+  color : gray;
+  cursor: pointer;
+  position: absolute;
+  bottom : 410px;
+  right : 20px;
+  border-left: 3px groove gray;
+  padding-left: 10px;
+}
+.boxOfficeContainer p:hover{
+  color: pink;
+}
+.boxOfficeContainer img{
+  cursor: pointer;
+}
+#loadingbar {
+  position: fixed;
+  border: 16px solid #CCCCCC;
+  border-top: 16px solid #32CDA0;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  top : 45%;
+  left : 45%;
+  z-index: 999;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.red{
+  color : OrangeRed;
+}
+.gray{
+  color : dimgray;
+}
+.blue{
+  color : DeepSkyBlue;
+}
+
+#peopleList ul li{
+  padding-left: 20px;
+  line-height: 30px;
+}
+
+#peopleList ul li:hover{
+  cursor: pointer;
+  background-color: pink;
+}

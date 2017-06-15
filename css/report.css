@@ -1,0 +1,377 @@
+body{
+  background-color : aliceblue;
+  font-family: 'Jeju Gothic', serif;
+  margin : 0;
+  padding : 0;
+}
+.center{
+  text-align: center;
+}
+
+/* 메뉴바 */
+nav{
+  color : white;
+  width : 1920px;
+  background-color : black;
+}
+.menu_item{
+  display : inline-block;
+  margin-right : 30px;
+  cursor : pointer;
+}
+.menu_item:hover{
+  color : DodgerBlue;
+}
+#developer_desc{
+  padding-right: 30px;
+  float: right;
+  display : inline-block;
+}
+.selected{
+  color : deeppink;
+}
+/* 메뉴바 end */
+
+#main_image{
+  margin : 0;
+  padding : 0;
+  width:1920px;
+  height : 320px;
+}
+
+#container{
+  margin-top : 0;
+  width : 1200px;
+  margin-left : auto;
+  margin-right : auto;
+}
+/* 프로젝트 개요 */
+.project_synopsis h2{
+  font-size : 40px;
+  border-bottom : 6px groove gray;
+  padding-bottom : 5px;
+  padding-left : 5px;
+}
+.project_synopsis h3{
+  font-size : 22px;
+  border-left : 6px groove gray;
+  padding-left : 15px;
+}
+.project_synopsis ul{
+  list-style-image: url(../res/movie_list_marker.png);
+  font-size : 16px;
+}
+.project_synopsis ul li{
+  line-height: 24px;
+}
+.project_synopsis ul li a{
+  text-decoration: none;
+  color : deeppink;
+}
+ul.target{
+  list-style-image: url(../res/user_list_marker.png);
+}
+.project_synopsis figure{
+  text-align: center;
+}
+.prototype_specification{
+  font-size : 16px;
+  line-height : 24px;
+}
+/* 프로젝트 개요 end */
+
+/* 사용자와 과업분석 */
+div.user_analysis > ul > li{
+  text-align: center;
+}
+div.user_analysis > ul > li > ul{
+  text-align: left;
+}
+.user_analysis h2{
+  font-size : 40px;
+  border-bottom : 6px groove gray;
+  padding-bottom : 5px;
+  padding-left : 5px;
+}
+.user_analysis h3{
+  text-align: left;
+  font-size : 22px;
+  border-left : 6px groove gray;
+  padding-left : 15px;
+}
+.user_analysis h4{
+  padding-left: 24px;
+  text-align: left;
+}
+.analysis_p{
+  padding-left: 10px;
+  border-left: 3px groove gray;
+  margin-left : 24px;
+  line-height: 22px;
+  font-size : 16px;
+  text-align: left;
+}
+.video_list{
+  list-style-type: none;
+}
+.user_desc{
+  list-style-image: url(../res/movie_list_marker.png);
+}
+.user_desc li{
+  line-height: 24px;
+}
+.user_analysis iframe{
+  width : 1200px;
+}
+/* 사용자와 과업분석 end*/
+
+/* 공공데이터 소개 및 테스트 */
+.api_introduction{
+
+}
+.api_introduction ul{
+  line-height: 24px;
+  list-style-image: url('../res/movie_list_marker.png');
+}
+.api_introduction ul li a{
+  text-decoration: none;
+  color : deeppink;
+}
+.api_introduction h2{
+  font-size : 40px;
+  border-bottom : 6px groove gray;
+  padding-bottom : 5px;
+  padding-left : 5px;
+}
+.api_introduction h3{
+  text-align: left;
+  font-size : 22px;
+  border-left : 6px groove gray;
+  padding-left : 15px;
+}
+.raw{
+  width : 1200px;
+  height : 500px;
+}
+.parsed{
+  width : 1200px;
+  height : 400px;
+}
+/* 공공데이터 소개 및 테스트 end*/
+
+/* 초기 프로토타입 및 사용성 평가 */
+.first_prototype h2{
+  font-size : 40px;
+  border-bottom : 6px groove gray;
+  padding-bottom : 5px;
+  padding-left : 5px;
+}
+.first_prototype h3{
+  text-align: left;
+  font-size : 22px;
+  border-left : 6px groove gray;
+  padding-left : 15px;
+}
+.banner{
+  margin : 0px 0px 0px 0px;
+  display : inline-block;
+  height : 180px;
+  width : 1200px;
+  text-decoration: none;
+  color : black;
+}
+.banner_title{
+  margin : 9px 0px 0px 0px;
+  text-align : center;
+  color : #32CDA0;
+  font-size : 100px;
+}
+.banner_desc{
+  padding-top : 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  margin : 0px 0px 0px 0px;
+  text-align : center;
+  font-size : 36px;
+}
+.prototype_link{
+  background: white;
+  border-radius : 15px;
+  text-align: center;
+}
+.first_prototype h4{
+  font-size: 30px;
+}
+#verification_submenu{
+  text-align: center;
+  height : 50px;
+  background: black;
+}
+#verification_submenu p{
+  font-size: 15px;
+  color: white;
+  margin: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  line-height: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+#verification_submenu p:hover{
+  color: black;
+  background: white;
+}
+.atmosphere ol li{
+  line-height: 40px;
+}
+.verification_content table{
+  margin-bottom: 30px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.verification_content table th{
+  width: 800px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color : white;
+  background: black;
+  margin: 0;
+}
+.verification_content table td{
+  width: 800px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color : black;
+  background: white;
+  margin: 0;
+}
+.first_prototype ol li{
+  line-height: 30px;
+}
+.first_prototype figure{
+  text-align: center;
+}
+.first_prototype figure img{
+  height : 1200px;
+}
+.first_prototype span{
+  font-size : 30px;
+}
+#atmos{
+  width:800px;
+  height:500px;
+}
+/* 초기 프로토타입 및 사용성 평가 end */
+
+/* 최종 프로토타입 */
+.final_prototype h2{
+  font-size : 40px;
+  border-bottom : 6px groove gray;
+  padding-bottom : 5px;
+  padding-left : 5px;
+}
+.final_prototype h3{
+  text-align: left;
+  font-size : 22px;
+  border-left : 6px groove gray;
+  padding-left : 15px;
+}
+.final_prototype h4{
+  text-align: left;
+  font-size : 16px;
+  background-color: whitesmoke;
+  color : black;
+  padding-top : 3px;
+  padding-bottom : 3px;
+  padding-left : 30px;
+  border-radius: 5px;
+}
+.final_prototype ol{
+  list-style-image: url('../res/movie_list_marker.png');
+}
+.final_prototype figure{
+  text-align: center;
+}
+.final_prototype p.gap{
+  padding-left: 20px;
+  line-height: 24px;
+}
+/* 최종 프로토타입 end */
+
+/* 최종 사용성 평가 */
+.final_user_analysis h2{
+  font-size : 40px;
+  border-bottom : 6px groove gray;
+  padding-bottom : 5px;
+  padding-left : 5px;
+}
+.final_user_analysis h3{
+  text-align: left;
+  font-size : 22px;
+  border-left : 6px groove gray;
+  padding-left : 15px;
+}
+.final_user_analysis h4{
+  text-align: left;
+  font-size : 16px;
+  color : black;
+  padding-top : 3px;
+  padding-bottom : 3px;
+  border-radius: 5px;
+}
+.todo{
+  list-style-image : url('../res/movie_list_marker.png');
+}
+.todo > li{
+  font-size : 16px;
+  line-height : 24px;
+}
+.exp{
+  list-style-image: url('../res/user_list_marker.png');
+}
+.exp > li{
+  font-size : 16px;
+  line-height : 24px;
+}
+.gap > span{
+  font-size : 20px;
+}
+/* 최종 사용성 평가 end */
+
+/* 결론 및 향후 개선 방향 */
+.conclusion h2{
+  font-size : 40px;
+  border-bottom : 6px groove gray;
+  padding-bottom : 5px;
+  padding-left : 5px;
+}
+.conclusion h3{
+  text-align: left;
+  font-size : 22px;
+  border-left : 6px groove gray;
+  padding-left : 15px;
+}
+.conclusion p{
+  line-height: 24px;
+  font-size : 20px;
+}
+/* 결론 및 향후 개선 방향 end */
+
+/* 참고 자료 */
+.reference ul{
+  list-style-image: url('../res/movie_list_marker.png');
+  font-size : 20px;
+  line-height: 24px;
+}
+.reference ul a{
+  text-decoration: none;
+  color : deepskyblue;
+}
+/* 참고 자료 end */
